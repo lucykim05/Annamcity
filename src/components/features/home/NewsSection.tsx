@@ -1,9 +1,9 @@
 'use client';
 
 const news = [
-  { id: 1, title: '안남시 환경대상 2년 연속 수상', date: '2025-08-20' },
-  { id: 2, title: '안남시 가을 문화축제 개최', date: '2025-09-01' },
-  { id: 3, title: '스마트시티 정책 발표', date: '2025-09-10' },
+  { id: 1, title: '안남시 청렴행정 대통령상 수상', date: '2016-08-20' },
+  { id: 2, title: '도시 개발 설명회 개최', date: '2016-09-01' },
+  { id: 3, title: '윤리 경영 우수 기관 선정', date: '2016-09-10' },
 ];
 
 export default function NewsSection() {
