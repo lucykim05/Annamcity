@@ -19,19 +19,21 @@ export default function Page() {
           <Carousel />
         </section>
 
-        {/* 주요 서비스 */}
         <section className="max-w-7xl mx-auto px-4 mt-12">
-          <ServiceSection />
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex-1 md:basis-2/3 bg-white rounded-xl shadow p-6">
+              <ServiceSection />
+            </div>
+
+            <div className="flex-1 md:basis-1/3 bg-white rounded-xl shadow p-6">
+              <InfoSection />
+            </div>
+          </div>
         </section>
 
         {/* 시정 소식 */}
         <section className="max-w-7xl mx-auto px-4 mt-20">
           <NewsSection />
-        </section>
-
-        {/* 시정 정보 */}
-        <section className="max-w-7xl mx-auto px-4 mt-20">
-          <InfoSection />
         </section>
       </main>
 
