@@ -23,6 +23,9 @@ export default function Navbar() {
 
         {/* PC 메뉴 */}
         <nav className="hidden md:flex space-x-8 text-sm font-medium">
+          <Link href="/about" className="text-gray-900 hover:text-gray-500">
+            안남소개
+          </Link>
           <Link href="/news" className="text-gray-900 hover:text-gray-500">
             시정소식
           </Link>
@@ -41,12 +44,7 @@ export default function Navbar() {
           >
             행정정보
           </Link>
-          <Link href="/culture" className="text-gray-900 hover:text-gray-500">
-            문화·관광
-          </Link>
-          <Link href="/economy" className="text-gray-900 hover:text-gray-500">
-            경제·투자
-          </Link>
+
           <Link
             href="/help/contact"
             className="text-gray-900 hover:text-gray-500"
