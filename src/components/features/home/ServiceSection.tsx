@@ -77,7 +77,7 @@ export default function ServiceSection() {
             ?.children.map((child, idx) => (
               <div
                 key={idx}
-                className="px-4 py-3 text-center bg-white rounded-lg shadow hover:bg-gray-100 cursor-pointer"
+                className="px-4 py-3 text-center bg-white text-sm rounded-lg shadow hover:bg-gray-100 cursor-pointer"
               >
                 {child}
               </div>
