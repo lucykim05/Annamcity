@@ -45,11 +45,8 @@ export default function Navbar() {
             행정정보
           </Link>
 
-          <Link
-            href="/help/contact"
-            className="text-gray-900 hover:text-gray-500"
-          >
-            고객센터
+          <Link href="/fields" className="text-gray-900 hover:text-gray-500">
+            분야별정보
           </Link>
         </nav>
 
@@ -100,11 +97,8 @@ export default function Navbar() {
               행정정보
             </Link>
 
-            <Link
-              href="/help/contact"
-              className="text-gray-900 hover:text-gray-500"
-            >
-              고객센터
+            <Link href="/fields" className="text-gray-900 hover:text-gray-500">
+              분야별정보
             </Link>
             <button className="mt-2 px-4 py-2 text-sm text-gray-500 bg-gray-200 rounded-md">
               검색

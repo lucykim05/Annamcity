@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
+// 컴포넌트 불러오기
+import Navbar from '@/components/common/Navbar';
+import Footer from '@/components/common/Footer';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -27,7 +31,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="antialiased">{children}</body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+      >
+        {/* 상단 네비게이션 */}
+        <Navbar />
+
+        {/* 페이지 본문 */}
+        <main className="flex-1">{children}</main>
+
+        {/* 하단 푸터 */}
+        <Footer />
+      </body>
     </html>
   );
 }
