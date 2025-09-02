@@ -39,7 +39,7 @@ export default function Navbar() {
             시민참여
           </Link>
           <Link
-            href="/gov/organization"
+            href="/organization"
             className="text-gray-900 hover:text-gray-500"
           >
             행정정보
