@@ -10,9 +10,6 @@ import Footer from '@/components/common/Footer';
 export default function Page() {
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col">
-      {/* 상단 네비게이션 */}
-      <Navbar />
-
       <main className="flex-1">
         {/* 메인 비주얼 */}
         <section className="mt-2">
@@ -36,9 +33,6 @@ export default function Page() {
           <NewsSection />
         </section>
       </main>
-
-      {/* 하단 푸터 */}
-      <Footer />
     </div>
   );
 }
