@@ -1,12 +1,11 @@
 import Sidebar from '@/components/common/Sidebar';
 
 const aboutMenu = [
-  { href: '/news/notices', label: '공지 사항' },
-  { href: '/news/press', label: '보도자료' },
-  { href: '/news/media', label: '포토, 영상' },
+  { href: '/civil/apply', label: '민원 접수' },
+  { href: '/civil/petitions', label: '청원 제안' },
 ];
 
-export default function NewsLayout({
+export default function CivilLayout({
   children,
 }: {
   children: React.ReactNode;
