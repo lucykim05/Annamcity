@@ -7,13 +7,13 @@ const services = [
     id: 1,
     title: '민원',
     icon: '💻',
-    children: ['시의상징', '기본현황', '도시정비기본계획'],
+    children: ['민원 접수', '청원 제안'],
   },
   {
     id: 2,
     title: '참여',
     icon: '📱',
-    children: ['공공시각매체', '공공와이파이', '개방화장실'],
+    children: ['대관 일정', '머시기 일정', '머시기 굿즈'],
   },
   {
     id: 3,
