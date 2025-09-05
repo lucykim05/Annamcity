@@ -5,6 +5,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import SearchBar from './SearchBar';
 
+const menuItems = [
+  { href: '/about', label: '안남소개' },
+  { href: '/news', label: '시정소식' },
+  { href: '/civil', label: '전자민원' },
+  { href: '/participation', label: '시민참여' },
+  { href: '/organization', label: '행정정보' },
+  { href: '/fields', label: '분야별정보' },
+];
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,31 +33,15 @@ export default function Navbar() {
 
         {/* PC 메뉴 */}
         <nav className="hidden md:flex space-x-8 text-sm font-medium">
-          <Link href="/about" className="text-gray-900 hover:text-gray-500">
-            안남소개
-          </Link>
-          <Link href="/news" className="text-gray-900 hover:text-gray-500">
-            시정소식
-          </Link>
-          <Link href="/civil" className="text-gray-900 hover:text-gray-500">
-            전자민원
-          </Link>
-          <Link
-            href="/participation"
-            className="text-gray-900 hover:text-gray-500"
-          >
-            시민참여
-          </Link>
-          <Link
-            href="/organization"
-            className="text-gray-900 hover:text-gray-500"
-          >
-            행정정보
-          </Link>
-
-          <Link href="/fields" className="text-gray-900 hover:text-gray-500">
-            분야별정보
-          </Link>
+          {menuItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-gray-900 hover:text-gray-500"
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         {/* 우측 버튼 */}
@@ -77,34 +70,22 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg z-50">
           <nav className="flex flex-col px-6 py-4 space-y-4 text-sm font-medium">
-            <Link href="/about" className="text-gray-900 hover:text-gray-500">
-              안남소개
-            </Link>
-            <Link href="/news" className="text-gray-900 hover:text-gray-500">
-              시정소식
-            </Link>
-            <Link href="/civil" className="text-gray-900 hover:text-gray-500">
-              전자민원
-            </Link>
-            <Link
-              href="/participation"
-              className="text-gray-900 hover:text-gray-500"
-            >
-              시민참여
-            </Link>
-            <Link
-              href="/organization"
-              className="text-gray-900 hover:text-gray-500"
-            >
-              행정정보
-            </Link>
+            {menuItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className="text-gray-900 hover:text-gray-500"
+              >
+                {item.label}
+              </Link>
+            ))}
 
-            <Link href="/fields" className="text-gray-900 hover:text-gray-500">
-              분야별정보
-            </Link>
             <SearchBar />
+
             <Link
               href="/login"
+              onClick={() => setIsOpen(false)}
               className="px-4 py-2 text-sm border text-gray-900 border-gray-300 rounded-md text-center hover:bg-gray-100"
             >
               로그인
