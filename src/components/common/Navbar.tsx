@@ -103,9 +103,12 @@ export default function Navbar() {
               분야별정보
             </Link>
             <SearchBar />
-            <button className="px-4 py-2 text-sm border text-gray-900 border-gray-300 rounded-md">
+            <Link
+              href="/login"
+              className="px-4 py-2 text-sm border text-gray-900 border-gray-300 rounded-md text-center hover:bg-gray-100"
+            >
               로그인
-            </button>
+            </Link>
           </nav>
         </div>
       )}
