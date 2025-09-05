@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import SearchBar from './SearchBar';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,9 +53,7 @@ export default function Navbar() {
 
         {/* 우측 버튼 */}
         <div className="hidden md:flex items-center space-x-6">
-          <button className="px-6 py-2 text-sm bg-gray-200 text-gray-900 rounded-md hover:bg-gray-300 cursor-pointer">
-            검색
-          </button>
+          <SearchBar />
           <button className="px-4 py-2 text-sm border border-gray-300 text-gray-900 rounded-md hover:bg-gray-100 cursor-pointer">
             로그인
           </button>
@@ -100,9 +99,7 @@ export default function Navbar() {
             <Link href="/fields" className="text-gray-900 hover:text-gray-500">
               분야별정보
             </Link>
-            <button className="mt-2 px-4 py-2 text-sm text-gray-500 bg-gray-200 rounded-md">
-              검색
-            </button>
+            <SearchBar />
             <button className="px-4 py-2 text-sm border text-gray-900 border-gray-300 rounded-md">
               로그인
             </button>
