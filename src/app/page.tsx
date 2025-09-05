@@ -1,11 +1,9 @@
 'use client';
 
-import Navbar from '@/components/common/Navbar';
 import Carousel from '@/components/common/Carousel';
 import ServiceSection from '@/components/features/home/ServiceSection';
 import NewsSection from '@/components/features/home/NewsSection';
 import InfoSection from '@/components/features/home/Infosection';
-import Footer from '@/components/common/Footer';
 
 export default function Page() {
   return (

@@ -13,7 +13,6 @@ export default function LoginPage() {
     e.preventDefault();
 
     try {
-      // ✅ 여기서 로그인 API 호출
       const res = await fetch('/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -25,10 +24,13 @@ export default function LoginPage() {
         throw new Error(message || '로그인 실패');
       }
 
-      // 성공 시 메인으로 이동
       router.push('/dashboard');
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('알 수 없는 오류가 발생했습니다.');
+      }
     }
   };
 
@@ -59,7 +61,7 @@ export default function LoginPage() {
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded-md cursor-pointer  hover:bg-blue-700"
+          className="w-full bg-blue-600 text-white py-2 rounded-md cursor-pointer hover:bg-blue-700"
         >
           로그인
         </button>
