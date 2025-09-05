@@ -54,9 +54,12 @@ export default function Navbar() {
         {/* 우측 버튼 */}
         <div className="hidden md:flex items-center space-x-6">
           <SearchBar />
-          <button className="px-4 py-2 text-sm border border-gray-300 text-gray-900 rounded-md hover:bg-gray-100 cursor-pointer">
+          <Link
+            href="/login"
+            className="px-4 py-2 text-sm border border-gray-300 text-gray-900 rounded-md hover:bg-gray-100 cursor-pointer"
+          >
             로그인
-          </button>
+          </Link>
         </div>
 
         {/* 햄버거 (모바일) */}
