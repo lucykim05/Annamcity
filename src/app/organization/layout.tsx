@@ -5,10 +5,10 @@ const aboutMenu = [
   { href: '/organization/시장', label: '시장??' },
   { href: '/news/press', label: '부시장' },
   { href: '/news/media', label: '경기지방검찰청' },
-  { href: '/organization/한도경', label: '한도경 어디소속임 ㅅㅂ' },
+  { href: '/organization/police', label: '한도경 어디소속임 ㅅㅂ' },
   {
-    href: '/organization/한도견',
-    label: '우리 뭐라고 할거임 한도견 관리 협회도 아니고',
+    href: '/organization/us',
+    label: '안남유기견보호소',
   },
 ];
 
