@@ -1,48 +1,64 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const services = [
   {
     id: 1,
     title: '민원',
     icon: '💻',
-    children: ['민원 접수', '청원 제안'],
+    children: [
+      { name: '민원 접수', path: '/civil/apply' },
+      { name: '청원 제안', path: '/civil/petitions' },
+    ],
   },
   {
     id: 2,
     title: '참여',
     icon: '📱',
-    children: ['대관 일정', '머시기 일정', '머시기 굿즈'],
+    children: [
+      { name: '머시기 일정', path: '/participation/schedule' },
+      { name: '머시기 굿즈', path: '/participation/goods' },
+    ],
   },
   {
     id: 3,
     title: '정보',
     icon: '🔍',
     children: [
-      '시장',
-      '부시장',
-      '경기지방검찰청',
-      '도견이네',
-      '한도견 관리 협회',
+      { name: '시장', path: '/organization/mayor' },
+      { name: '부시장', path: '/organization/vice-mayor' },
+      { name: '경기지방검찰청', path: '/organization/prosecutor' },
+      { name: '도견이네', path: '/organization/doggy' },
+      { name: '안남유기견보호소', path: '/organization/us' },
     ],
   },
   {
     id: 4,
     title: '소식',
     icon: '✉️',
-    children: ['공지사항', '보도자료'],
+    children: [
+      { name: '공지사항', path: '/news/notices' },
+      { name: '보도자료', path: '/news/press' },
+      { name: '포토, 영상', path: './news/photo' },
+    ],
   },
   {
     id: 5,
     title: '아수라',
     icon: '🎥',
-    children: ['촬영지', '뭐하지', '볼 수 있는 플랫폼?'],
+    children: [
+      { name: '촬영지', path: '/fields/culture' },
+      { name: '뭐하지', path: '/fields/um' },
+      { name: '볼 수 있는 플랫폼?', path: '/asura/platforms' },
+    ],
   },
 ];
 
 export default function ServiceSection() {
   const [active, setActive] = useState<number | null>(null);
+  const router = useRouter();
 
   return (
     <div className="text-gray-900">
@@ -70,7 +86,7 @@ export default function ServiceSection() {
         ))}
       </div>
 
-      {/* 하위 버튼 (선택된 경우에만 표시) */}
+      {/* 하위 버튼 */}
       {active && (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
           {services
@@ -78,9 +94,10 @@ export default function ServiceSection() {
             ?.children.map((child, idx) => (
               <div
                 key={idx}
+                onClick={() => router.push(child.path)} // ✅ 클릭 시 이동
                 className="px-4 py-3 text-center bg-white text-sm rounded-lg shadow hover:bg-gray-100 cursor-pointer"
               >
-                {child}
+                {child.name}
               </div>
             ))}
         </div>

@@ -2,8 +2,8 @@ import Sidebar from '@/components/common/Sidebar';
 import Link from 'next/link';
 
 const aboutMenu = [
-  { href: '/participation/굿즈....?', label: '굿즈...?' },
-  { href: '/participation/일정...?', label: '일정...?' },
+  { href: '/participation/goods', label: '굿즈...?' },
+  { href: '/participation/schedule', label: '일정...?' },
 ];
 
 export default function ParticipationLayout({

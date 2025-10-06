@@ -2,10 +2,10 @@ import Sidebar from '@/components/common/Sidebar';
 import Link from 'next/link';
 
 const aboutMenu = [
-  { href: '/organization/시장', label: '시장??' },
-  { href: '/news/press', label: '부시장' },
-  { href: '/news/media', label: '경기지방검찰청' },
-  { href: '/organization/police', label: '한도경 어디소속임 ㅅㅂ' },
+  { href: '/organization/mayor', label: '시장??' },
+  { href: '/organization/vice-mayor', label: '부시장' },
+  { href: '/organization/prosecutor', label: '경기지방검찰청' },
+  { href: '/organization/doggy', label: '한도경 어디소속임 ㅅㅂ' },
   {
     href: '/organization/us',
     label: '안남유기견보호소',
